@@ -1,0 +1,29 @@
+.hero-unit  {
+  background: #FFFFFF;
+  padding: 0;
+  margin: 0;
+  height: 600px;
+  @include box-shadow;
+  @include border-radius(10px);
+
+  & p{
+    padding: 0;
+    margin: 0;
+    padding-top: 20px;
+    text-align: center;
+    @include single-text-shadow;
+    font-family:Georgia;
+    float: left;
+    line-height: 2.5;
+    font-size: 1.5em;
+  }
+
+ & img{
+   display:block;
+   padding-top:30px;
+   padding-left: 50px;
+   margin: 0;
+
+
+ }
+}

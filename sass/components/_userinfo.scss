@@ -1,0 +1,30 @@
+
+
+
+.user-info  {
+  background: #A1A1A1;
+  padding: 0;
+  margin: 0;
+  height: 250px;
+  @include box-shadow;
+
+
+}
+
+.picture{
+  float:left;
+  padding: 10px;
+  margin:0 5px 0 0;
+}
+.user-info p  {
+
+  padding: 0;
+  margin: 0;
+  padding-top: 20px;
+  text-align: center;
+  @include single-text-shadow;
+  font-family:Georgia;
+  float: right;
+  line-height: 2.5;
+  font-size: 1.2em;
+}

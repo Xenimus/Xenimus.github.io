@@ -12,53 +12,52 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/application.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
 
 
-
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-      <div class="wrap">
-        <section class="masthead">
-          <section class="logo">
-            <p>X</p>
-          </section>
-
-          <p>Xen!muX</p>
-          <ul class= "navigation">
-            <a href="index.html"><li>Home</li></a>
-            <a href="music.html"><li>Music</li></a>
-            <a href="games.html"><li>Games</li></a>
-            <a href="contact.html"><li>Contact Info</li></a>
-            <a href="about.html"><li>About</li></a>
-          </ul>
-        </section>
-
+      <div class="container">
         <section class="hero-unit">
-          <img class="picture" src="img/news.jpg" style="width:200px;height:200px">
-        <p>Upcomming News: </p>
-        <p>12/1/2014: Xen!muX is currently working on a new EP. More details
-        will be posted when they become available. Release date is also TBD</p>
-        <p>10/24/2014: New music has just been released, to hear it visit my soundcloud or splice.
-        Free Downloads are available as always </p>
+          <h1>Quora</h1>
+          <p>
+            Quora has taken the world by storm with a unique system that works so fluidly you would wonder why anyone is making a big deal about it. It’s a powerful tool that simple lets you ask and answer questions. What makes this tool so unique is the super fast auto complete search box, which also doubles as a method for adding new questions. The site is developed by some of the co-founders Facebook.
+          </p>
+          <h3>Fast Queries</h3>
+          <p>
+            The search box is very, very fast, but why is this? The queries are sent over AJAX as a GET request. The response then comes in as JSON with the rendered HTML embedded inside the JSON. Quora uses a persistent connection, meaning the HTTP connection is established when you start typing in the search box.
+          </p>
+          <h3>Webnode2 and Livenode</h3>
+          <p>
+            Webnode2 and Livenode are some of Quora’s internal systems, which are for managing content. Webnode2 generates HTML, CSS and JavaScript, which is paired with LiveNode, which manages the display of the content on the page. They would like to open source LiveNode however that would be too much work at the time.
+
+          </p>
+          <h3>Amazon Web Services</h3>
+          <p>
+            Amazon EC2 and S3 are used for the hosting; it’s perfectly designed for fast growing companies. Quora also uses Ubuntu Linux as its OS, since it’s easy to deploy and manage on Amazon EC2. For serving up static content Quora uses Amazon’s distributed content delivery network Cloudfront.
+          </p>
+          <h3>HAProxy Load-Balancing</h3>
+          <p>
+            Quora uses HAProxy at the front end, which load balances on the distributed Nginx servers. Behind the load balancer sits Nginx, which is used a reverse proxy server onto the web servers. Pylons, which is a lightweight web framework, is used as their main webserver behind the Nginx. With the Pylons template they scooped out the insides and added their won technologies. Which is where the LiveNode and webnode2 reside. Python was chosen as the language for the site over PHP and JavaScript. The reason Python was chosen over Java was because its more expressive and quicker to write code then Java. Thrift is used for communications between the backend systems. The Thrift is written in C++. Finally the Tornado web framework is used for live updating. This is their Comet server, which handles the large volumes of open connections used for pushing updates to the browser.
+          </p>
+          <h3>Long Polling</h3>
+          <p>
+            Quora does not just serve up static web pages. The pages are updated with new content when others submit it. Long polling puts the server in control by making the client wait for a request. The server waits to respond to the client’s request until they have something new to serve to the page. The benefit of long polling is there is less back and forth between the server and client.
+          </p>
+          <h3>MySQL</h3>
+          <p>
+            Quora uses MySQL as a distributed data store. They used MySQL instead of NoSQL because for social sites you should not use NoSQL until you have at least one million users. Memcached is used as a caching layer in front of MySQL. Finally they use Git for the version control system. Further look upon Quora’s source code its apparent that all the JavaScript is placed at the end of the page. It creates the feeling of a quicker loading page since all the content is loaded before the JavaScript is seen.
+          </p>
+          <h4>References: </h4>
+          <p>
+            "Quora." Why Did Choose Python for Its Development? -. N.p., n.d. Web. 24 Feb. 2015.
+            http://www.quora.com/Why-did-Quora-choose-Python-for-its-development
+          </p>
+          <p>
+            Whelan, Phil. "Quora’s Technology Examined." Big Fast Blog. N.p., 31 Feb. 2011. Web. 24 Feb. 2015.
+            http://www.bigfastblog.com/quoras-technology-examined
+          </p>
         </section>
-
     </div>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
     </body>
 </html>
